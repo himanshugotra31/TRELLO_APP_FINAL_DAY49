@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRELLO APP: LOGIN</title>
+</head>
+<body>
+    <h1>
+        LOGIN
+    </h1>
+    <form action="" method="POST">
+        {%csrf_token%}
+        USERNAME: <p><input name='username' type='text' placeholder='PLEASE ENTER USERNAME: '></p>
+        PASSWORD: <p><input name='password' type='password' placeholder='PLEASE ENTER PASSWORD: '></p>
+        <input type='submit' name='submit' value='LOGIN'>
+    </form>
+    {%for message in messages%}
+        {{message}}
+    {%endfor%}
+</body>
+</html>

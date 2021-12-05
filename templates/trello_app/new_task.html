@@ -1,0 +1,16 @@
+{% extends 'trello_app/base.html' %}
+
+{%block title%} ADD NEW TASK {%endblock%}
+
+{%block content%} 
+<h1>
+    ADD NEW TASK
+</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input value='ADD TASK'  type='submit'>
+</form>
+
+ 
+{% endblock %}
